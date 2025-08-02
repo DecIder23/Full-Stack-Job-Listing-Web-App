@@ -1,0 +1,17 @@
+project-root/
+├── backend/
+│   ├── app.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── init_db.py
+│   └── .env.example
+├── frontend/
+│   └── src/
+│       ├── index.js
+│       ├── index.css
+│       ├── App.js
+│       ├── JobCard.js
+│       ├── JobForm.js
+│       └── Filters.js
+└── scraper/
+    └── scrape_jobs.py

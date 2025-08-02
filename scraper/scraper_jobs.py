@@ -8,14 +8,9 @@ import re
 import requests
 import json
 from datetime import datetime, timedelta
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from bs4 import BeautifulSoup
 import undetected_chromedriver as uc
 
-profile_path = "C:\\Users\\Stranger\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1"
+profile_path = "replace this with your profile path"
 
 class ActuaryJobScraper:
     def __init__(self, api_endpoint="http://localhost:5000/jobs", headless=True):
@@ -41,9 +36,9 @@ class ActuaryJobScraper:
         options.add_argument('--disable-gpu')
         options.add_argument('--start-maximized')
         options.add_argument('--disable-features=VizDisplayCompositor')
-        options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36')
+        
 
-        CHROME_VERSION = 138
+        CHROME_VERSION = #your chrome version e.g 128, 130 
         try:
             self.driver = uc.Chrome(options=options, version_main=CHROME_VERSION)
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
